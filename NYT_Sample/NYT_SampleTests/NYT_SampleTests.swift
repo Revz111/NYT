@@ -9,27 +9,35 @@ import XCTest
 @testable import NYT_Sample
 
 final class NYT_SampleTests: XCTestCase {
-
+    
+    var manager: NetworkManager!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        manager = NetworkManager.shared
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testFetchpopularNewsSuccess() async throws {
+        manager.apiKey = "iTa359tg35Xg63H2D0b2D50limIBpI9o"
+        manager.fetchPopularNews { (response, error) in
+            if let news =  response as? [News] {
+                XCTAssertEqual(news.count, 20)
+            } else {
+                XCTFail("Error happens")
+            }
+        }
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testFetchpopularNewsInvalidApiKey() async throws {
+        manager.apiKey = "iTa359tg35Xg63H2D0b2D50limIBpI9ott"
+        manager.fetchPopularNews { (response, error) in
+            if let news =  response as? [News] {
+                XCTFail("Returns success when it should be error.")
+            } else {
+                XCTAssert(true)
+            }
         }
     }
 

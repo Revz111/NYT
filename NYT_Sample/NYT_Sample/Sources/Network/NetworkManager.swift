@@ -10,8 +10,8 @@ import Foundation
 class NetworkManager {
 	static let shared = NetworkManager()
 
-	private let baseURL = "https://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/"
-	private let apiKey = "iTa359tg35Xg63H2D0b2D50limIBpI9o"
+	public var baseURL = "https://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/"
+    public var apiKey = "iTa359tg35Xg63H2D0b2D50limIBpI9o"
 
 	typealias NetworkCompletion = (_ response: Any?, _ error: Error?) -> Void
 
