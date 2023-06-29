@@ -30,7 +30,6 @@
 		498264352A4C6E6E005C4BD1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498264342A4C6E6E005C4BD1 /* MainViewModel.swift */; };
 		498264372A4C7282005C4BD1 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498264362A4C7282005C4BD1 /* UIImageView.swift */; };
 		498264392A4C9608005C4BD1 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498264382A4C9608005C4BD1 /* NewsDetailViewController.swift */; };
-		4982643B2A4C9C3D005C4BD1 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982643A2A4C9C3D005C4BD1 /* MockURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +77,6 @@
 		498264342A4C6E6E005C4BD1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		498264362A4C7282005C4BD1 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		498264382A4C9608005C4BD1 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
-		4982643A2A4C9C3D005C4BD1 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,7 +261,6 @@
 		4982643C2A4C9C50005C4BD1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				4982643A2A4C9C3D005C4BD1 /* MockURLSession.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -424,7 +421,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				494E2E402A4B2C680012ACB1 /* NYT_SampleTests.swift in Sources */,
-				4982643B2A4C9C3D005C4BD1 /* MockURLSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
